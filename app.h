@@ -4,6 +4,7 @@
 #include "../shared/shared_app.h"
 #include "table_controller.h"
 #include <escher.h>
+#include "../shared/poincare_local_pool.h"
 
 namespace Atomic {
 
@@ -29,6 +30,7 @@ public:
   }
 private:
   App(Snapshot * snapshot);
+  Shared::PoincareLocalPool m_poincarePool;
   TableController m_controller;
   StackViewController m_stackViewController;
 };
